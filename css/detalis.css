@@ -1,0 +1,6 @@
+#document_weblite_detalis {
+  overflow: auto;
+  justify-content: flex-start;
+  align-items: normal;
+  padding: 5vmin 5vw 5vmin 5vw;
+}

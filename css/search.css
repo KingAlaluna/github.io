@@ -1,0 +1,12 @@
+#document_search {
+  overflow: auto;
+  justify-content: normal;
+}
+
+#container_search_amine {
+  min-height: 70%;
+}
+
+/*#no_result_text {
+  display: none;
+}*/

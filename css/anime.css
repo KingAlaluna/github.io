@@ -1,0 +1,65 @@
+#document_anime {
+  overflow: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#name_viewing_anime {
+  margin: auto 5% auto 5%;
+}
+
+#container_information_anime_1 {
+  width: 90%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+  text-align: center;
+}
+
+#container_information_anime_2 {
+  border-radius: 10px;
+  border-left: 4px solid var(--border-color);
+  background: var(--gradient-1);
+  padding: 0 5% 0 5%;
+}
+#container_information_anime_2 > h3 {
+  display: block;
+  width: 100%;
+  height: max-content;
+  padding: 2vmin;
+  border-radius: 10px;
+}
+#container_information_anime_2 > h3:nth-child(2n) {
+  background: var(--gradient-3);
+}
+
+#details_anime {
+  margin: 18px 5% 18px 5%;
+  width: 90%;
+  border-radius: 10px;
+  border-left: 4px solid var(--border-color);
+  background: var(--gradient-1);
+  padding: 5%;
+}
+
+#details_anime[open] #summary_anime {
+  margin-bottom: 15px;
+}
+
+#video {
+  width: 90%;
+  min-height: 60vw;
+  max-height: max-content;
+}
+
+/*альбомні стилі*/
+@media (orientation: landscape) {
+  #container_information_anime_1 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+  #details_anime[open] #summary_anime {
+    margin-bottom: 30px;
+  }
+}

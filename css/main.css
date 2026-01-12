@@ -1,0 +1,67 @@
+/*стилі для книжноі орієнтаціі*/
+#main_document,
+#document_anime_sort {
+  overflow: auto;
+  position: relative;
+  justify-content: normal;
+}
+
+.top_10_anime {
+  height: max-content;
+  justify-content: normal;
+  background: var(--gradient-1);
+  width: 95%;
+  margin: 4vmin 2.5% 0 2.5%;
+  border-radius: 10px;
+  border-top: 4px solid var(--border-color);
+  border-bottom: 4px solid var(--border-color);
+}
+
+.recommend {
+  height: max-content;
+  min-height: 70%;
+  justify-content: normal;
+}
+
+#text_top_anime,
+#text_recommend_anime {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*пагинация*/
+#pagination {
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 60%;
+  height: 10vh;
+  max-width: max-content;
+  margin: 5vmax;
+}
+
+.pagination-btn {
+  height: 70%;
+  width: auto;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  background: var(--gradient-5);
+}
+
+.pagination-btn > svg {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+
+/*стилі для альбомноі орієнтаціі*/
+@media (orientation: landscape) {
+  #pagination {
+    min-width: 30%;
+    height: 18vh;
+  }
+  
+  .pagination-btn {
+    height: 80%;
+  }
+}
+

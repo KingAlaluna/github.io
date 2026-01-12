@@ -1,0 +1,54 @@
+#document_sort_anime {
+  width: 90%;
+  height: 70%;
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  border-radius: 10px;
+  border: 4px solid var(--border-color);
+  display: none;
+  background: var(--gradient-1);
+  justify-content: normal;
+  overflow: auto;
+  display: none;
+  z-index: 999999;
+}
+
+.container_sort_anime {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+  height: max-content;
+}
+
+.button_sort {
+  width: 90%;
+  min-height: 5vh;
+  max-height: max-content;
+  border-radius: 10px;
+  margin: 1.5vw 0 1.5vw 5%;
+  background: var(--gradient-3);
+  overflow-wrap: break-word;
+}
+.button_sort:hover {
+  background: var(--gradient-5) !important;
+  transform: scale(0.9);
+}
+
+/*для альбомногл режиму*/
+@media (orientation: landscape) {
+  #document_sort_anime {
+    height: 65%;
+    bottom: 15%;
+  }
+  
+  .container_sort_anime {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .button_sort {
+    min-height: 10vh;
+    margin: 1vw 0 1vw 5%;
+  }
+}
