@@ -1,0 +1,202 @@
+/*css змінні*/
+:root {
+  --border-color: #101229;
+  --color-000: #000;
+  --color-f00: #f00;
+  --color-999: #999;
+  --color-333: #333;
+  --gradient-1: linear-gradient(165deg, #F6FBFF 0%, #E8B6C2 90%);
+  --gradient-2: linear-gradient(155deg, #E8B6C2 0%, #F6FBFF 90%);
+  --gradient-3: linear-gradient(155deg, #F0A7B2 0%, #B86776 90%);
+  --gradient-4: linear-gradient(155deg, #FEE4E5 0%, #fff 30%, #DDCDCD 70%);
+  --gradient-5: linear-gradient(155deg, #9AB6BA 0%, #77B2BA 90%);
+  --profile-avatar: #000;
+}
+
+/*стилі для книжноі орієнтаціі*/
+html, body, div {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+@font-face {
+    font-family: 'MyCustomFont'; /* Любое имя для шрифта */
+    src: url('944-font.ttf') format('truetype'); /* путь к файлу */
+    font-weight: normal; /* насыщенность */
+    font-style: normal; /* стиль */
+}
+
+* {
+  flex-shrink: 0;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  color: var(--color-000);
+}
+
+h1, h2 {
+  font-family: 'Russo One', sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.text_125 {
+  font-size: 125%;
+}
+.text_150 {
+  font-size: 150%;
+}
+.text_200 {
+  font-size: 200%;
+}
+
+.text_no_margin {
+  margin: 0;
+}
+
+.theme_content_1 {
+  height: max-content;
+  width: 100%;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  overflow: auto;
+  gap: 5%;
+}
+
+.theme_content_2,
+.theme_content_3 {
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+.anime_title,
+.anime_score,
+.anime_scored_by,
+.anime_rank,
+.anime_rating,
+.anime_year {
+  margin: auto 5% auto 5%;
+}
+.anime_score,
+.anime_year,
+.anime_rank,
+.anime_rating {
+  background-color: var(--color-f00);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  color: #fff;
+  width: max-content;
+  height: max-content;
+  margin: 0;
+  border-radius: 0 5px 0 5px;
+}
+.anime_year {
+  right: auto;
+  left: 0;
+  border-radius: 5px 0 5px 0;
+}
+.anime_rank {
+  top: auto;
+  bottom: 0;
+  border-radius: 5px 0 5px 0;
+}
+.anime_rating {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.anime_container_1 {
+  width: 40vw;
+  height: 100%;
+}
+
+.anime_container_2 {
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.anime_1,
+.anime_2,
+.anime_3 {
+  aspect-ratio: 5/7;
+  border-radius: 10px;
+  border: 4px solid var(--border-color);
+  position: relative;
+}
+.anime_1,
+.anime_2 {
+  width: 100%;
+  height: auto;
+}
+.anime_3 {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.anime_1:hover,
+.anime_2:hover,
+.anime_3:hover {
+  transform: scale(0.95);
+}
+
+.container_all_law_protected {
+  height: 20%;
+  background-color: var(--color-999);
+  border-top: 4px solid var(--border-color);
+}
+.text_all_law_protected {
+  color: var(--color-333);
+  margin: 10%;
+}
+
+/*стилі для альбомноі орієнтаціі*/
+@media (orientation: landscape) {
+  .theme_content_1 {
+    width: 97.5%;
+    gap: 2.5%;
+  }
+  
+  .theme_content_2,
+  .theme_content_3 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+  
+  .anime_container_1 {
+    width: 20vw;
+  }
+  
+  /*.container_all_law_protected {
+    height: 30%;
+  }*/
+}
