@@ -128,6 +128,9 @@
 #button_bottom_document {
   bottom: 20%;
 }
+#button_top_document {
+  display: none;
+}
 #button_top_document > svg,
 #button_bottom_document > svg {
   width: 80%;
@@ -186,7 +189,7 @@
   #button_bottom_document {
     height: 15%;
     bottom: 40%;
-    display: none;
+    display: none !important;
   }
   #button_bottom_document {
     bottom: 20%;
