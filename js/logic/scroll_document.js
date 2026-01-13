@@ -33,3 +33,32 @@ button_top_document_2.addEventListener('click', () => {
 button_bottom_document_2.addEventListener('click', () => {
   scrollToBottom();
 });
+
+
+//стилі для кнопок під час скрола
+function styleScroll() {
+  scroll_document.forEach(e => {
+    e.addEventListener('scroll', () => {
+      let scrollTop = e.scrollTop;
+      let scrollHeight = e.scrollHeight;
+      let clientHeight = e.clientHeight;
+      let timer = null;
+      
+      button_top_document.style.display = 'none';
+      button_bottom_document.style.display = 'none';
+      
+      clearTimeout(timer);
+      
+      timer = setTimeout(() => {
+        if (scrollTop > clientHeight * 0.5) {
+          button_top_document.style.display = 'block';
+        }
+        if (scrollTop + clientHeight < scrollHeight - clientHeight * 0.5) {
+          button_bottom_document.style.display = 'block';
+        }
+      }, 10);
+    });
+  });
+}
+styleScroll();
+
