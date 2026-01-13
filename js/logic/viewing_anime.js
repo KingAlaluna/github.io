@@ -69,3 +69,12 @@ function information_anime(anime) {
   //video
   video.src = anime.trailer.embed_url;
 }
+
+
+//обробник системноі кнопки назад
+window.history.replaceState({ page: 'main' }, '');
+
+window.onpopstate = function(event) {
+    none_all_docunent(); 
+    main_document.style.display = 'flex';
+};
