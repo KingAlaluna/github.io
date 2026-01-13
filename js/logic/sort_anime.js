@@ -81,7 +81,7 @@ pgBtnRight.addEventListener('click', async () => {
 
 
 
-//отображения аниме
+//відображення аніме 
 const container_recommend_amine = document.getElementById('container_recommend_amine');
 const container_top_10_anime = document.getElementById('container_top_10_anime');
 const document_sort_anime = document.getElementById('document_sort_anime');
@@ -112,6 +112,7 @@ button_sort_anime.addEventListener('click', () => {
 
 
 //logic sort anime
+//аніме топ
 async function sort_top_anime() {
   try {
   //server logic
@@ -155,6 +156,7 @@ async function sort_top_anime() {
     //click
     container_anime.addEventListener('click', () => {
       information_anime(anime);
+      window.history.pushState({ page: 'other' }, '');
     });
     //вложеність
     container_top_10_anime.append(container_anime);
@@ -165,6 +167,8 @@ async function sort_top_anime() {
   }
 }
 
+
+// аніме рекомендації
 async function sort_anime() {
   try {
   //recommend anime
@@ -213,6 +217,7 @@ async function sort_anime() {
     //click
     container_anime.addEventListener('click', () => {
       information_anime(anime);
+      window.history.pushState({ page: 'other' }, '');
     });
     //вложеність
     container_recommend_amine.append(container_anime);
@@ -223,6 +228,8 @@ async function sort_anime() {
   }
 }
 
+
+//функції різного стану
 async function start_anime() {
   paginationDocument = 1;
   pagTextContent();
