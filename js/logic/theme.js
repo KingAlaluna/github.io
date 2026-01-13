@@ -44,3 +44,13 @@ button_theme.addEventListener('click', () => {
     light_themes();
   }
 });
+
+
+//для системноі теми
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  dark_theme = true;
+  dark_themes();
+} else {
+  dark_theme = false;
+  light_themes();
+}
