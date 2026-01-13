@@ -49,8 +49,9 @@
 
 #video {
   width: 90%;
-  min-height: 60vw;
+  min-height: 60vmin;
   max-height: max-content;
+  margin: auto auto 25vmin auto;
 }
 
 /*альбомні стилі*/
