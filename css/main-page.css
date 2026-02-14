@@ -1,12 +1,12 @@
 /*стилі для книжноі орієнтаціі*/
-#main_document,
-#document_anime_sort {
+#main-page,
+#page-anime-sort {
   overflow: auto;
   position: relative;
   justify-content: normal;
 }
 
-.top_10_anime {
+.top-10-anime {
   height: max-content;
   justify-content: normal;
   background: var(--gradient-1);
@@ -23,8 +23,8 @@
   justify-content: normal;
 }
 
-#text_top_anime,
-#text_recommend_anime {
+#text-top-anime,
+#text-recommend-anime {
   margin-left: 10%;
   margin-right: 10%;
 }

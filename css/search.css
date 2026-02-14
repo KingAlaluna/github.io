@@ -1,12 +1,9 @@
-#document_search {
+#page-search {
   overflow: auto;
   justify-content: normal;
 }
 
-#container_search_amine {
+#container-search-amine {
   min-height: 70%;
 }
 
-/*#no_result_text {
-  display: none;
-}*/

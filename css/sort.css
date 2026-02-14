@@ -1,4 +1,4 @@
-#document_sort_anime {
+#page-sort-anime {
   width: 90%;
   height: 70%;
   position: fixed;
@@ -14,7 +14,7 @@
   z-index: 999999;
 }
 
-.container_sort_anime {
+.container-sort-anime {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -22,7 +22,11 @@
   height: max-content;
 }
 
-.button_sort {
+#container-sort-year {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn-sort {
   width: 90%;
   min-height: 5vh;
   max-height: max-content;
@@ -31,23 +35,27 @@
   background: var(--gradient-3);
   overflow-wrap: break-word;
 }
-.button_sort:hover {
+.btn-sort:hover {
   background: var(--gradient-5) !important;
   transform: scale(0.9);
 }
 
 /*для альбомногл режиму*/
 @media (orientation: landscape) {
-  #document_sort_anime {
-    height: 65%;
-    bottom: 15%;
+  #page-sort-anime {
+    height: 60%;
+    bottom: 20%;
   }
   
-  .container_sort_anime {
+  .container-sort-anime {
     grid-template-columns: repeat(6, 1fr);
   }
   
-  .button_sort {
+  #container-sort-year {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .btn-sort {
     min-height: 10vh;
     margin: 1vw 0 1vw 5%;
   }

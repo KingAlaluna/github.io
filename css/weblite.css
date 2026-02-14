@@ -4,7 +4,7 @@
   background: var(--gradient-4);
 }
 
-#top_banner {
+#main-banner {
   height: 18%;
   position: fixed;
   top: 0%;
@@ -14,7 +14,7 @@
   align-content: end;
 }
 
-#logo_container {
+#logo-container {
   width: max-content;
   height: 40%;
   flex-direction: row;
@@ -22,16 +22,16 @@
   top: 2vw;
   left: 2vh;
 }
-#logo_img {
+#logo-img {
   height: 100%;
   width: auto;
   aspect-ratio: 1/1;
 }
-#logo_text {
+#logo-text {
   margin: 0 0 0 1vw;
 }
 
-#button_theme_2 {
+#btn-theme {
   height: 40%;
   width: auto;
   aspect-ratio: 1/1;
@@ -41,13 +41,13 @@
   border-radius: 10px;
   background: var(--gradient-5);
 }
-#button_theme {
+#btn-theme-2 {
   width: 75%;
   height: 75%;
-  background-image: url(../img/style/light_theme.svg);
+  background-image: url(../img/style/light-theme.svg);
 }
 
-#container_input_search {
+#container-input-search {
   height: 30%;
   width: auto;
   flex: 1;
@@ -57,7 +57,7 @@
   padding-right: 2vw;
   margin: auto 2vh 4vw 2vh;
 }
-#input_search {
+#input-search {
   text-align: center;
   border-radius: 10px;
   width: auto;
@@ -67,33 +67,32 @@
   outline: none;
   background-color: inherit;
 }
-#button_search {
+#btn-search {
   height: 70%;
   width: auto;
   aspect-ratio: 1/1;
 }
 
-.svg_element {
-  stroke: var(--color-000);
-}
-
-#bottom_banner {
+#bottom-banner {
   height: 8%;
   position: fixed;
   bottom: 0%;
   flex-direction: row;
   border-top: 4px solid var(--border-color);
   background: var(--gradient-2);
+  justify-content: space-between;
 }
 
-.button_bottom_banner {
+.btn-bottom-banner,
+#btn-top-page-2,
+#btn-bottom-page-2 {
   height: 80%;
-  width: 28%;
+  width: auto;
+  aspect-ratio: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10%;
   border-radius: 10px;
   margin-left: 2%;
   margin-right: 2%;
@@ -101,19 +100,19 @@
 }
 
 /*активна кнопка*/
-#button_main_document {
+#btn-main-page {
   background: var(--gradient-5);
 }
 
-.button_bottom_banner > img,
-.button_bottom_banner > svg {
-  height: 50%;
+.btn-bottom-banner > img,
+.btn-bottom-banner > svg {
+  height: 80%;
   width: auto;
   aspect-ratio: 1/1;
 }
 
-#button_top_document,
-#button_bottom_document {
+#btn-top-page,
+#btn-bottom-page {
   position: fixed;
   bottom: 30%;
   right: 2vh;
@@ -125,38 +124,34 @@
   z-index: 9999;
   cursor: pointer;
 }
-#button_bottom_document {
+#btn-bottom-page {
   bottom: 20%;
 }
-#button_top_document {
+#btn-top-page {
   display: none;
 }
-#button_top_document > svg,
-#button_bottom_document > svg {
+#btn-top-page > svg,
+#btn-bottom-page > svg {
   width: 80%;
   height: 80%;
   margin: 10%;
   pointer-events: none;
 }
 
-#button_top_document_2,
-#button_bottom_document_2 {
-  height: 80%;
-  width: auto;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
+#btn-top-page-2,
+#btn-bottom-page-2 {
   display: none;
   background: var(--gradient-5);
 }
-#button_top_document_2 > svg,
-#button_bottom_document_2 > svg {
+#btn-top-page-2 > svg,
+#btn-bottom-page-2 > svg {
   pointer-events: none;
   width: auto;
   height: 100%;
   aspect-ratio: 1/1;
 }
 
-#content_container {
+#content-container {
   height: 74%;
   position: absolute;
   top: 18%;
@@ -166,56 +161,44 @@
 /*стилі для альбомноі орієнтації*/
 @media (orientation: landscape) {
   /*bottom banner*/
-  #bottom_banner {
-    height: 12%;
-    /*height: 18%;*/
-    justify-content: normal;
-    
-  }
-  .button_bottom_banner {
-    flex-direction: row;
-    width: 22%;
-  }
-  .button_bottom_banner > img,
-  .button_bottom_banner > svg {
-    height: 100%;
+  #bottom-banner {
+    height: 18%;
+    justify-content: center;
   }
   
-  #content_container {
-    height: 70%;
+  #content-container {
+    height: 64%;
   }
   
-  #button_top_document,
-  #button_bottom_document {
+  #btn-top-page,
+  #btn-bottom-page {
     height: 15%;
     bottom: 40%;
     display: none !important;
   }
-  #button_bottom_document {
+  #btn-bottom-page {
     bottom: 20%;
   }
   
-  #button_top_document_2,
-  #button_bottom_document_2 {
+  #btn-top-page-2,
+  #btn-bottom-page-2 {
     display: flex;
-    width: 8%;
-    margin: auto 0vw auto 2vw;
   }
   
   /*top banner*/
-  #logo_container {
+  #logo-container {
     height: 80%;
     position: static;
     margin-left: 2%;
   }
   
-  #container_input_search {
+  #container-input-search {
     height: 70%;
     padding-right: 1vw;
     margin: 15% 2% 15% 2%;
   }
   
-  #button_theme_2 {
+  #btn-theme {
     position: static;
     height: 80%;
     margin: 10% 2% 10% auto;

@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AnimePotik — це сучасний онлайн-каталог аніме, що працює на базі Jikan API (офіційний сервіс MyAnimeList). Наша система забезпечує пошук аніме в режимі реального часу, надаючи користувачам доступ до величезної бази даних: жанри аніме, рейтинги, дати виходу та студії виробництва. Завдяки повній інтеграції з API, інформація про топ-25 аніме, популярні серіали та новинки завжди залишається актуальною для наших відвідувачів">
+  <meta name="description" content="АнімеПотік — це сучасний онлайн-каталог аніме, що працює на базі Jikan API (офіційний сервіс MyAnimeList). Наша система забезпечує пошук аніме в режимі реального часу, надаючи користувачам доступ до величезної бази даних: жанри аніме, рейтинги, дати виходу та студії виробництва. Завдяки повній інтеграції з API, інформація про топ-25 аніме, популярні серіали та новинки завжди залишається актуальною для наших відвідувачів">
   
   
   <title>AnimePotik — сайт для пошуку інформації про аніме</title>
   <!--загальні стилі-->
-  <link rel="stylesheet" href="main_style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="main-style.css">
   <!--стилі-->
   <link rel="stylesheet" href="css/weblite.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main-page.css">
   <link rel="stylesheet" href="css/sort.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/register.css">
-  <link rel="stylesheet" href="css/anime.css">
+  <link rel="stylesheet" href="css/anime-viewing.css">
   <link rel="stylesheet" href="css/detalis.css">
-  <!--керування видимістю сторінок-->
-  <link rel="stylesheet" href="display.css">
+  
+  
   <!--шрифти-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
-    
+  
   <!--logo в браузері-->
   <link rel="icon" href="img/style/Logo-128x128.webp" type="image/webp">
 </head>
@@ -32,86 +33,107 @@
 <body>
   <div id="weblite">
     <!--banner top-->
-    <div id="top_banner">
-      <div id="logo_container">
-        <img id="logo_img" src="img/style/Logo-128x128.webp">
-        <h1 id="logo_text">AnimePotik</h1>
+    <div id="main-banner">
+      <div id="logo-container">
+        <img id="logo-img" src="img/style/logo.webp">
+        <h1 id="logo-text">AnimePotik</h1>
       </div>
       
-      <div id="container_input_search">
-        <input id="input_search" type="search" placeholder="Введіть назву аніме">
-        <svg id="button_search" class="svg_element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="container-input-search">
+        <input id="input-search" type="search" placeholder="Введіть назву аніме">
+        <svg id="btn-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"/>
           <line x1="21" y1="21" x2="16.65" y2="16.65"/>
         </svg>
       </div>
       
-      <div id="button_theme_2">
-        <button id="button_theme"></button>
+      <div id="btn-theme">
+        <button id="btn-theme-2"></button>
       </div>
     </div>
+    
+    
     <!--banner bottom-->
-    <div id="bottom_banner">
-      <button data-document="main_document" class="button_switch_document button_bottom_banner" id="button_main_document">
-        <svg class="svg_element" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div id="bottom-banner">
+      
+      
+      <button data-document="main-page" class="btn-switch-page btn-bottom-banner" id="btn-main-page">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
           <polyline points="9 22 9 12 15 12 15 22"/>
         </svg>
-        Головна
       </button>
-      <button class="button_bottom_banner" id="button_sort_anime">
-        <svg class="svg" viewBox="0 0 24 24">
-          <path class="svg_element" d="M2,2 22,2 22,22 2,22 z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-          <path class="svg_element" d="M6.5,6.5 6.5,6.5 M12,6.5 12,6.5 M17.5,6.5 17.5,6.5 M6.5,12 6.5,12 M12,12 12,12 M17.5,12 17.5,12 M6.5,17.5 6.5,17.5 M12,17.5 12,17.5 M17.5,17.5 17.5,17.5" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+      
+      
+      <button class="btn-bottom-banner" id="btn-sort-anime">
+        <svg viewBox="0 0 24 24">
+          <path d="M2,2 22,2 22,22 2,22 z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M6.5,6.5 6.5,6.5 M12,6.5 12,6.5 M17.5,6.5 17.5,6.5 M6.5,12 6.5,12 M12,12 12,12 M17.5,12 17.5,12 M6.5,17.5 6.5,17.5 M12,17.5 12,17.5 M17.5,17.5 17.5,17.5" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
         </svg>
-        Сортувати
       </button>
-      <button class="button_bottom_banner" id="button_detalis_weblite">
+      
+      
+      <button class="btn-bottom-banner" id="btn-my-project">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#000" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M60,10 40,90 M30,30 10,50 30,70 M70,30 90,50 70,70" />
+        </svg>
+      </button>
+      
+      
+      <button class="btn-bottom-banner" id="btn-detalis-weblite">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path class="svg_element" d="M 12,2 Q 22,2 22,12 Q 22,22 12,22 Q 2,22 2,12 Q 2,2 12,2 Z" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
-          <path class="svg_element" d="M8 9c0-2 1.5-3.5 3.5-3.5S16 7 16 9c0 2.5-3 3-4 4.5V15m0 3v0" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 12,2 Q 22,2 22,12 Q 22,22 12,22 Q 2,22 2,12 Q 2,2 12,2 Z" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M8 9c0-2 1.5-3.5 3.5-3.5S16 7 16 9c0 2.5-3 3-4 4.5V15m0 3v0" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Про сайт
       </button>
+      
+      
       <!--скриті кнопки-->
       <!-- 1 scroll document-->
-      <div id="button_top_document_2">
-        <svg class="svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div id="btn-top-page-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12,19 12,5 M5,12 12,5 19,12" />
         </svg>
       </div>
-      <div id="button_bottom_document_2">
-        <svg class="svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      
+      <div id="btn-bottom-page-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12,19 12,5 M5,12 12,19 19,12" />
         </svg>
       </div>
+      
     </div>
+    
+    
     <!-- 2 scroll document-->
-    <a id="button_top_document">
-      <svg class="svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a id="btn-top-page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12,19 12,5 M5,12 12,5 19,12" />
       </svg>
     </a>
-    <a id="button_bottom_document">
-      <svg class="svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    
+    <a id="btn-bottom-page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12,19 12,5 M5,12 12,19 19,12" />
       </svg>
     </a>
+    
+    
     <!--контент-->
-    <div id="content_container">
+    <div id="content-container">
       
       <!--сторінка з аніме (головна та відсортовані)-->
-      <div class="scroll_document documents type_flex" id="main_document">
-        <div class="top_10_anime">
-          <h2 id="text_top_anime">Топ 25:</h2>
-          <div class="theme_content_1" id="container_top_10_anime">
+      <div class="scroll-page page type-flex" id="main-page">
+        <div class="top-10-anime">
+          <h2 id="text-top-anime">Топ 25:</h2>
+          <div class="theme-content-1" id="container-top-10-anime">
             <!--контент добавляє js-->
           </div>
         </div>
         
         <div class="recommend">
-          <h2 id="text_recommend_anime">Рекомендую:</h2>
-          <div class="theme_content_2" id="container_recommend_amine">
+          <h2 id="text-recommend-anime">Рекомендую:</h2>
+          <div class="theme-content-2" id="container-recommend-amine">
             <!--контент добавляє js-->
           </div>
         </div>
@@ -131,121 +153,116 @@
           </div>
         </div>
         
-        <div class="container_all_law_protected">
-          <span class="text_all_law_protected">© 2025 АнімеПотік. Всі права захищені.</span>
+        <div class="container-all-law-protected">
+          <span class="text-all-law-protected">© 2025 АнімеПотік. Всі права захищені.</span>
         </div>
       </div>
+      
+      
+      
       
       <!--модальне меню сортувати аніме-->
-      <div class="scroll_document documents" id="document_sort_anime">
+      <div class="scroll-page page" id="page-sort-anime">
+        
+        
         <h2>Жанр:</h2>
-        <div class="container_sort_anime">
-          <button class="button_sort button_genre_sort" data-genre="1" data-text="Екшен">Екшен</button>
-          <button class="button_sort button_genre_sort" data-genre="2" data-text="Пригоди">Пригоди</button>
-          <button class="button_sort button_genre_sort" data-genre="4" data-text="Комедія">Комедія</button>
-          <button class="button_sort button_genre_sort" data-genre="8" data-text="Драма">Драма</button>
-          <button class="button_sort button_genre_sort" data-genre="10" data-text="Фентезі">Фентезі</button>
-          <button class="button_sort button_genre_sort" data-genre="14" data-text="Жахи">Жахи</button>
-          <button class="button_sort button_genre_sort" data-genre="7" data-text="Містика">Містика</button>
-          <button class="button_sort button_genre_sort" data-genre="22" data-text="Романтика">Романтика</button>
-          <button class="button_sort button_genre_sort" data-genre="24" data-text="Наукова фантастика">Наукова фантастика</button>
-          <button class="button_sort button_genre_sort" data-genre="36" data-text="Повсякденність">Повсякденність</button>
-          <button class="button_sort button_genre_sort" data-genre="30" data-text="Спорт">Спорт</button>
-          <button class="button_sort button_genre_sort" data-genre="37" data-text="Надприродне">Надприродне</button>
-          <button class="button_sort button_genre_sort" data-genre="41" data-text="Трилер">Трилер</button>
-          <button class="button_sort button_genre_sort" data-genre="27" data-text="Сьонен">Сьонен</button>
-          <button class="button_sort button_genre_sort" data-genre="25" data-text="Сьоджьо">Сьоджьо</button>
-          <button class="button_sort button_genre_sort" data-genre="42" data-text="Сейнен">Сейнен</button>
-          <button class="button_sort button_genre_sort" data-genre="43" data-text="Джьосей">Джьосей</button>
-          <button class="button_sort button_genre_sort" data-genre="15" data-text="Для дітей">Для дітей</button>
-          <button class="button_sort button_genre_sort" data-genre="13" data-text="Історичні">Історичні</button>
-          <button class="button_sort button_genre_sort" data-genre="17" data-text="Бойові мистецтва">Бойові мистецтва</button>
-          <button class="button_sort button_genre_sort" data-genre="18" data-text="Меха">Меха</button>
-          <button class="button_sort button_genre_sort" data-genre="19" data-text="Музика">Музика</button>
-          <button class="button_sort button_genre_sort" data-genre="23" data-text="Школа">Школа</button>
-          <button class="button_sort button_genre_sort" data-genre="31" data-text="Суперсили">Суперсили</button>
-          <button class="button_sort button_genre_sort" data-genre="38" data-text="Військові">Військові</button>
-          <button class="button_sort button_genre_sort" data-genre="39" data-text="Поліція">Поліція</button>
-          <button class="button_sort button_genre_sort" data-genre="40" data-text="Психологічні">Психологічні</button>
-          <button class="button_sort button_genre_sort" data-genre="9" data-text="Еччі">Еччі</button>
-          <button class="button_sort button_genre_sort" data-genre="49" data-text="Еротика">Еротика</button>
-          <button class="button_sort button_genre_sort" data-genre="12" data-text="Хентай">Хентай</button>
+        <div id="container-sort-genre" class="container-sort-anime">
+          <!--контент додає js-->
         </div>
+        
+        
         <h2>Тип:</h2>
-        <div class="container_sort_anime">
-          <button class="button_sort button_type_sort" data-type="tv" data-text="Телесеріали">Телесеріали</button>
-          <button class="button_sort button_type_sort" data-type="movie" data-text="Фільми">Фільми</button>
-          <button class="button_sort button_type_sort" data-type="ova" data-text="OVA">OVA</button>
-          <button class="button_sort button_type_sort" data-type="special" data-text="Спешели">Спешели</button>
-          <button class="button_sort button_type_sort" data-type="ona" data-text="ONA">ONA</button>
-          <button class="button_sort button_type_sort" data-type="music" data-text="Музичні відео">Музичні відео</button>
+        <div id="container-sort-type" class="container-sort-anime">
+          <!--контент додає js-->
         </div>
+        
+        
         <h2>Рік:</h2>
-        <div class="container_sort_anime">
-          <button class="button_sort button_year_sort" data-year="2025" data-text="за 2025 рік">2025</button>
-          <button class="button_sort button_year_sort" data-year="2024" data-text="за 2024 рік">2024</button>
-          <button class="button_sort button_year_sort" data-year="2023" data-text="за 2023 рік">2023</button>
-          <button class="button_sort button_year_sort" data-year="2022" data-text="за 2022 рік">2022</button>
-          <button class="button_sort button_year_sort" data-year="2021" data-text="за 2021 рік">2021</button>
-          <button class="button_sort button_year_sort" data-year="2020" data-text="за 2020 рік">2020</button>
-          <button class="button_sort button_year_sort" data-year="2019" data-text="за 2019 рік">2019</button>
-          <button class="button_sort button_year_sort" data-year="2018" data-text="за 2018 рік">2018</button>
-          <button class="button_sort button_year_sort" data-year="2017" data-text="за 2017 рік">2017</button>
-          <button class="button_sort button_year_sort" data-year="2016" data-text="за 2016 рік">2016</button>
-          <button class="button_sort button_year_sort" data-year="2015" data-text="за 2015 рік">2015</button>
-          <button class="button_sort button_year_sort" data-year="2014" data-text="за 2014 рік">2014</button>
-          <button class="button_sort button_year_sort" data-year="2013" data-text="за 2013 рік">2013</button>
-          <button class="button_sort button_year_sort" data-year="2012" data-text="за 2012 рік">2012</button>
-          <button class="button_sort button_year_sort" data-year="2011" data-text="за 2011 рік">2011</button>
-          <button class="button_sort button_year_sort" data-year="2010" data-text="за 2010 рік">2010</button>
-          <button class="button_sort button_year_sort" data-year="2009" data-text="за 2009 рік">2009</button>
-          <button class="button_sort button_year_sort" data-year="2008" data-text="за 2008 рік">2008</button>
-          <button class="button_sort button_year_sort" data-year="2007" data-text="за 2007 рік">2007</button>
-          <button class="button_sort button_year_sort" data-year="2006" data-text="за 2006 рік">2006</button>
-          <button class="button_sort button_year_sort" data-year="2005" data-text="за 2006 рік">2005</button>
-          <button class="button_sort button_year_sort" data-year="2004" data-text="за 2004 рік">2004</button>
-          <button class="button_sort button_year_sort" data-year="2003" data-text="за 2003 рік">2003</button>
-          <button class="button_sort button_year_sort" data-year="2002" data-text="за 2002 рік">2002</button>
-          <button class="button_sort button_year_sort" data-year="2001" data-text="за 2001 рік">2001</button>
-          <button class="button_sort button_year_sort" data-year="2000" data-text="за 2000 рік">2000</button>
+        <div id="container-sort-year" class="container-sort-anime">
+          <!--контент додає js-->
         </div>
+        
+        
         <h2>Студія:</h2>
-        <div class="container_sort_anime">
-          <button class="button_sort button_studio_sort" data-studio="4" data-text="Студії Bones">Bones</button>
-          <button class="button_sort button_studio_sort" data-studio="10" data-text="Студії Production I.G">Production I.G</button>
-          <button class="button_sort button_studio_sort" data-studio="11" data-text="Студії Madhouse">Madhouse</button>
-          <button class="button_sort button_studio_sort" data-studio="18" data-text="Студії Toei Animation">Toei Animation</button>
-          <button class="button_sort button_studio_sort" data-studio="21" data-text="Студії Studio Ghibli">Studio Ghibli</button>
-          <button class="button_sort button_studio_sort" data-studio="28" data-text="Студії OLM">OLM</button>
-          <button class="button_sort button_studio_sort" data-studio="29" data-text="Студії Nippon Animation">Nippon Animation</button>
-          <button class="button_sort button_studio_sort" data-studio="37" data-text="Студії Studio Deen">Studio Deen</button>
-          <button class="button_sort button_studio_sort" data-studio="43" data-text="Студії ufotable">ufotable</button>
-          <button class="button_sort button_studio_sort" data-studio="44" data-text="Студії Shaft">Shaft</button>
-          <button class="button_sort button_studio_sort" data-studio="47" data-text="Студії Sunrise">Sunrise</button>
-          <button class="button_sort button_studio_sort" data-studio="56" data-text="Студії A-1 Pictures">A-1 Pictures</button>
-          <button class="button_sort button_studio_sort" data-studio="79" data-text="Студії Genco">Genco</button>
-          <button class="button_sort button_studio_sort" data-studio="91" data-text="Студії Studio Pierrot">Studio Pierrot</button>
-          <button class="button_sort button_studio_sort" data-studio="112" data-text="Студії Kyoto Animation">Kyoto Animation</button>
-          <button class="button_sort button_studio_sort" data-studio="314" data-text="Студії White Fox">White Fox</button>
-          <button class="button_sort button_studio_sort" data-studio="569" data-text="Студії MAPPA">MAPPA</button>
-          <button class="button_sort button_studio_sort" data-studio="858" data-text="Студії Wit Studio">Wit Studio</button>
-          <button class="button_sort button_studio_sort" data-studio="1835" data-text="Студії CloverWorks">CloverWorks</button>
+        <div id="container-sort-studio" class="container-sort-anime">
+          <!--контент додає js-->
         </div>
       </div>
       
+      
+      
+      
+      <!--сторінка мої проекти-->
+      <div class="scroll-page page" id="page-my-project">
+        <h2>✨ Мої Проєкти</h2>
+        
+        <h3>Сайти:</h3>
+        
+        
+        <h2>AnimeHub-MPA</h2>
+        <p>Мій <b>третій опублікований</b> проєкт. Він представляє собою сайт для <b>перегляду аніме</b>, підключений до <b>Jikan API</b>.</p>   
+        <h3>Основні відмінності AnimeHub-MPA над AnimePotik-SPA:</h3>
+        
+        <ul>
+          <li><b>React та додаткові бібліотеки:</b> AnimeHub-MPA написаний з використанням фреймворка <b>React</b> для сучасноі архітектури та бібліотек <b>Font Awesome</b> для іконок і <b>Marked</b> для транслюваня мови розмітки <b>Markdown в html</b>. AnimePotik-SPA написаний на <b>Vanilla JavaScript</b>, без використання фреймворків та бібліотек.</li>
+          <li><b>Інформація:</b> AnimeHub-MPA крім стандартної інформації про аніме також підтримує <b>детальну інформацію</b> про <b>персонажів</b> аніме та <b>акторів/актрис</b> які озвучували даного персонажа. AnimePotik-SPA підтримує <b>тільки</b> стандартну інформацію.</li>
+          <li><b>Улюблені аніме:</b> AnimeHub-MPA має можливість <b>додати аніме</b> в улюблене, завдяки <b>localStorage</b>. AnimePotik-SPA такоі можливості <b>не має</b>.</li>
+          <li><b>Фільтри:</b> AnimeHub-MPA дозволяє вибирати <b>декілька фільтрів</b> одночасно, в залежності від можливостей <b>Jikan API</b>. AnimePotik-SPA дозволяє одночасно вибрати <b>тільки 1</b> фільтр.</li>
+          <li><b>Підтримуваність:</b> AnimeHub-MPA набагато легше <b>підтримувати та розширювати</b> ніж AnimePotik-SPA, завдяки сучасним фреймворку <b>React</b> та бібліотек <b>Font Awesome</b> і <b>Marked</b>.</li>
+          <li><b>Архітектура:</b> AnimeHub-MPA на архітектурі <b>MPA</b> (окремий html для кожноі сторінки). AnimePotik-SPA на архітектурі <b>SPA</b> (1 html файл).</li>
+        </ul>
+        
+        <a href="https://kingalaluna.github.io/AnimeHub-MPA/">Перейти на AnimeHub-MPA</a>
+        
+        <h3>AnimeHub-MPA проєкт з відкритим вихідним кодом</h3>
+        
+        <a href="https://github.com/KingAlaluna/AnimeHub-MPA.git">Глянути вихідний код</a>
+        
+        
+        <br>
+        <br>
+        <h2>AnimeHub-SPA</h2>
+        <p>Мій <b>другий опублікований</b> проєкт. Він представляє собою сайт для <b>перегляду аніме</b>, підключений до <b>Jikan API</b>.</p>   
+        <h3>Основні відмінності AnimeHub-SPA над AnimePotik-SPA та AnimeHub-MPA:</h3>
+        
+        <ul>
+          <li><b>Архітектура:</b> AnimeHub-SPA на архітектурі <b>SPA</b> (детальнійше про різницю архітектур <b>читати на AnimeHub-SPA</b>).</li>
+          <li><b>Інше:</b> В іншому AnimeHub-SPA <b>такий-же</b> як і AnimeHub-MPA, і відміності AnimeHub-SPA від AnimePotik-SPA <b>такі-ж</b> як і AnimeHub-MPA від AnimePotik-SPA.</li>
+        </ul>
+        
+        <a href="https://kingalaluna.github.io/AnimeHub-SPA/">Перейти на AnimeHub-SPA</a>
+        
+        <h3>AnimeHub-SPA проєкт з відкритим вихідним кодом</h3>
+        
+        <a href="https://github.com/KingAlaluna/AnimeHub-SPA.git">Глянути вихідний код</a>
+        
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Ігри:</h3>
+        <h4>Тут буде коротка інформація та посилання на мої ігри...</h4>
+      </div>
+      
+      
+      
       <!--сторінка про сайт-->
-      <div class="scroll_document documents" id="document_weblite_detalis">
+      <div class="scroll-page page" id="page-weblite-detalis">
+        <h1>Інформація нижче буде найбільш корисною для ІТ рекрутерів та розробників, які оцінюють технічну частину моїх проєктів.</h1>
+        
+        
         <h2>🛠️ Технічна Реалізація</h2>
         
         <h3>Код (Frontend):</h3>
         <ul>
           <li><strong>Чистий код:</strong> Проєкт написаний виключно на HTML5, CSS3 та чистому JavaScript (Vanilla JS). Відсутність фреймворків та бібліотек демонструє глибоке розуміння того, що відбувається "під капотом".</li>
-          <li><strong>Розвиток стандартів:</strong> У сучасних проєктах <strong>суворо дотримуюсь</strong> стандартів іменування: camelCase для JavaScript та kebab-case для CSS (<strong>раніше</strong> в давніх проєктах (цей проєкт також <strong>давній</strong>) використовував кирилицю або "_" для кращого розуміння логіки, але тепер <strong>повністю відійшов</strong> від цієї практики). Також в планах <strong>переписати</strong> код цього сайту під <strong>camelCase</strong> та <strong>kebab-case</strong>.</li>
           <li><strong>Модульність:</strong> Код розділений на окремі файли, кожен з яких виконує свою конкретну функцію (наприклад, `theme.js` керує перемиканням тем). Це забезпечує легку підтримку та масштабованість проєкту.</li>
           <li><strong>Оптимізація:</strong> Код максимально компактний, ефективний та уникає дублювання (принцип DRY - Don't Repeat Yourself).</li>
           <li><strong>Динамічні дані:</strong> Сайт підключений до реального, популярного публічного API – Jikan. (Детальніше про це в розділі "Jikan API").</li>
         </ul>
-
+        
+        
         <h3>Дизайн та Адаптивність:</h3>
         <ul>
           <li><strong>Гнучкий макет:</strong> У верстці використовуються виключно адаптивні одиниці (`%`, `vh`, `vw`, `vmin`, `vmax`) та медіа-запити для коректного відображення, включно з альбомним режимом.</li>
@@ -254,7 +271,8 @@
           <li><strong>Еволюція дизайну:</strong> Елементи, такі як градієнти, поле пошуку та банери, неодноразово змінювалися для досягнення найкращого результату.</li>
           <li><strong>Примітка розробника:</strong> Як програміст, я надаю перевагу роботі за готовим макетом, оскільки це забезпечує швидкий результат, що відповідає очікуванням клієнта. Розробка власного ідеального дизайну є тривалим і складним процесом.</li>
         </ul>
-
+        
+        
         <h3>Jikan API:</h3>
         <ul>
           <li><strong>Опис:</strong> Jikan API — це безкоштовний публічний API для отримання детальної інформації про аніме.</li>
@@ -262,6 +280,7 @@
           <li><strong>Вивантаження даних:</strong> Оскільки API видає по 25 аніме за один запит, ця кількість є стандартною для відображення в усіх відповідних секціях сайту.</li>
           <li><strong>Різноманіття:</strong> База даних Jikan містить інформацію про найрізноманітніші аніме (за роками, студіями, жанрами), включно з контентом для дорослих.</li>
         </ul>
+       
         
         <h2>❓ FAQ (Часті Запитання)</h2>
         
@@ -272,7 +291,9 @@
           <li><strong>Фільтрація та Обмеження Даних:</strong> З метою забезпечення чистого та зручного інтерфейсу (UX) і запобігання перевантаженню користувача, функціонал фільтрації було обмежено. Для фільтрів за жанрами та студіями були обрані лише <strong>найбільш популярні та актуальні</strong> категорії. Аналогічно, у фільтрі за роком представлені дані лише за період з <strong>2000 до 2025</strong> року.</li>
         </ul>
         
+        
         <h2>👤 Про Себе</h2>
+        
         <ul>
           <li><strong>Ім'я та Роль:</strong> Мене звуть Віктор. Я — <strong>Frontend-розробник</strong> (верстальник), який прагне працювати на фрилансі.</li>
           <li><strong>Навички:</strong> Впевнено володію HTML, CSS, JavaScript, SVG. Маю досвід роботи з API та великими масивами і об'єктами локальних данних. Є досвід розробки багатьох <strong>міні-ігор</strong> та <strong>сайтів</strong> (не для портфоліо, для власного вдосконалення, можливо в майбутньому я додам іх до портфоліо на <strong>GitHub</strong>). Досвіду роботи з бекендом не маю.</li>
@@ -281,67 +302,52 @@
           <li><strong>Звернення до клієнтів (Важлива примітка):</strong> Звертаюсь до майбутніх клієнтів із проханням надавати <strong>готовий макет</strong> (Figma, Sketch) та <strong>чіткі технічні вимоги</strong>. Це значно прискорить розробку, забезпечить 100% відповідність вашим очікуванням і дозволить уникнути тривалого узгодження дизайну.</li>
         </ul>
         
-        <h2>✨ Мої Проєкти</h2>
-        <h3>Сайти:</h3>
-        <h4>Тут буде коротка інформація та посилання на мої сайти...</h4>
-        <h3>Ігри:</h3>
-        <h4>Тут буде коротка інформація та посилання на мої ігри...</h4>
       </div>
       
+      
+      
+      
       <!--сторінка аніме дивитись-->
-      <div class="scroll_document documents" id="document_anime">
+      <div class="scroll-page page" id="page-anime">
         <br>
-        <h1 id="name_viewing_anime">Ванпачмент</h1>
+        <h1 id="name-viewing-anime">Ванпачмент</h1>
         <br><br>
-        <div id="container_information_anime_1">
-          <img id="img_viewing_anime" class="anime_3">
-          <div id="container_information_anime_2">
-            <h2 id="score_viewing_anime">Оцінка: 9.2/10</h2>
-            <h3 id="score_by_viewing_anime" class="text_no_margin">Кількість оцінок:</h3>
-            <h3 id="rank_viewing_anime" class="text_no_margin">Місце в рейтингу:</h3>
-            <h3 id="popularity_viewing_anime" class="text_no_margin">Місце по популярності:</h3>
-            <h3 id="members_viewing_anime" class="text_no_margin">Кількість користувачів:</h3>
-            <h3 id="favorites_viewing_anime" class="text_no_margin">Додали в вибранне:</h3>
-            <h3 id="demographics_viewing_anime" class="text_no_margin">Цільова аудиторія:</h3>
-            <h3 id="rating_viewing_anime" class="text_no_margin">Віковий рейтинг:</h3>
-            <h3 id="year_viewing_anime" class="text_no_margin">Рік: 2022</h3>
-            <h3 id="season_viewing_anime" class="text_no_margin">Сезон: 1</h3>
-            <h3 id="aired_viewing_anime" class="text_no_margin">Повна дата випуску:</h3>
-            <h3 id="episode_viewing_anime" class="text_no_margin">Серій: 12</h3>
-            <h3 id="duration_viewing_anime" class="text_no_margin">Тривалість серії:</h3>
-            <h3 id="status_viewing_anime" class="text_no_margin">Статус:</h3>
-            <h3 id="airing_viewing_anime" class="text_no_margin">Чи виходить тепер:</h3>
-            <h3 id="studios_viewing_anime" class="text_no_margin">Студія: Anime</h3>
-            <h3 id="type_viewing_anime" class="text_no_margin">Тип:</h3>
-            <h3 id="source_viewing_anime" class="text_no_margin">Первинне джерело:</h3>
-            <h3 id="genre_viewing_anime" class="text_no_margin">Жанри:</h3>
-            <h3 id="themes_viewing_anime" class="text_no_margin">Тема:</h3>
-            <br>
-          </div>
+        <div id="container-info-anime-1">
+          <!--контент додає js-->
         </div>
-        <details id="details_anime">
-          <summary id="summary_anime"><strong>Опис:</strong></summary>
-          <div id="synopsis_anime">
+        <details id="details-anime">
+          <summary id="summary-anime"><strong>Опис:</strong></summary>
+          <div id="synopsis-anime">
             <!--контент добавляє js-->
           </div>
         </details>
         <h2>Трейлери:</h2>
-        <iframe id="video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        <iframe id="video" src="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
         <br>
-        <div class="container_all_law_protected">
-          <span class="text_all_law_protected">© 2025 АнімеПотік. Всі права захищені.</span>
+        <div class="container-all-law-protected">
+          <span class="text-all-law-protected">© 2025 АнімеПотік. Всі права захищені.</span>
         </div>
       </div>
     </div>
   </div>
+  
+  
+  <!--data-->
+  <script src="js/data/config.js"></script>
+  <script src="js/data/filterAnime.js"></script>
+  
+  
   <!--logic-->
-  <script src="js/logic/switch_document.js"></script>
-  <script src="js/logic/anime_search.js"></script>
-  <script src="js/logic/viewing_anime.js"></script>
+  <script src="js/logic/switchDocument.js"></script>
+  <script src="js/logic/animeSearch.js"></script>
+  <script src="js/logic/viewingAnime.js"></script>
   <script src="js/logic/profile.js"></script>
-  <script src="js/logic/detalis_weblite.js"></script>
-  <script src="js/logic/sort_anime.js"></script>
-  <script src="js/logic/scroll_document.js"></script>
+  <script src="js/logic/myProjects.js"></script>
+  <script src="js/logic/detalisWeblite.js"></script>
+  <script src="js/logic/apiAnime.js"></script>
+  <script src="js/logic/filterAnime.js"></script>
+  <script src="js/logic/scrollDocument.js"></script>
   <script src="js/logic/theme.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,30 @@
+/*css змінні*/
+/*світла тема*/
+:root {
+  --border-color: #101229;
+  --color-000: #000;
+  --color-f00: #f00;
+  --color-999: #999;
+  --color-333: #333;
+  --gradient-1: linear-gradient(165deg, #F6FBFF 0%, #E8B6C2 90%);
+  --gradient-2: linear-gradient(155deg, #E8B6C2 0%, #F6FBFF 90%);
+  --gradient-3: linear-gradient(155deg, #F0A7B2 0%, #B86776 90%);
+  --gradient-4: linear-gradient(155deg, #FEE4E5 0%, #fff 30%, #DDCDCD 70%);
+  --gradient-5: linear-gradient(155deg, #9AB6BA 0%, #77B2BA 90%);
+}
+
+
+
+/*темна тема*/
+[data-theme="dark"] {
+  --border-color: #CBD2DC;
+  --color-000: #fff;
+  --color-f00: #f00;
+  --color-999: #333;
+  --color-333: #999;
+  --gradient-1: linear-gradient(165deg, #101229 0%, #161E4F 40%, #101010 90%);
+  --gradient-2: linear-gradient(155deg, #101010 10%, #161E4F 60%, #101229 100%);
+  --gradient-3: linear-gradient(155deg, #21517F 0%, #092C64 90%);
+  --gradient-4: linear-gradient(155deg, #0a1929 0%, #1e3a5f 30%, #0d1b2a 70%);
+  --gradient-5: linear-gradient(155deg, #9AB6BA 0%, #77B2BA 90%);
+}
