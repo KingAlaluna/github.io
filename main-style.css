@@ -160,7 +160,8 @@ textarea {
 }
 
 .container-all-law-protected {
-  height: 20%;
+  height: 20vh;
+  width: 100vw;
   background-color: var(--color-999);
   border-top: 4px solid var(--border-color);
 }
